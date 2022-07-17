@@ -1,0 +1,206 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.2",
+    "types": [],
+    "structs": [
+        {
+            "name": "badge_count",
+            "base": "",
+            "fields": [
+                {
+                    "name": "badge",
+                    "type": "name"
+                },
+                {
+                    "name": "count",
+                    "type": "uint16"
+                }
+            ]
+        },
+        {
+            "name": "cgchecks",
+            "base": "",
+            "fields": [
+                {
+                    "name": "creator",
+                    "type": "name"
+                },
+                {
+                    "name": "badge",
+                    "type": "name"
+                },
+                {
+                    "name": "starttime",
+                    "type": "time_point_sec"
+                },
+                {
+                    "name": "cycle_length",
+                    "type": "uint64"
+                },
+                {
+                    "name": "max_cap",
+                    "type": "uint8"
+                },
+                {
+                    "name": "ipfsimage",
+                    "type": "string"
+                },
+                {
+                    "name": "details",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "crchecks",
+            "base": "",
+            "fields": [
+                {
+                    "name": "creator",
+                    "type": "name"
+                },
+                {
+                    "name": "badge",
+                    "type": "name"
+                },
+                {
+                    "name": "rollup_criteria",
+                    "type": "badge_count[]"
+                },
+                {
+                    "name": "ipfsimage",
+                    "type": "string"
+                },
+                {
+                    "name": "details",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "cschecks",
+            "base": "",
+            "fields": [
+                {
+                    "name": "creator",
+                    "type": "name"
+                },
+                {
+                    "name": "badge",
+                    "type": "name"
+                },
+                {
+                    "name": "parentbadge",
+                    "type": "name[]"
+                },
+                {
+                    "name": "ipfsimage",
+                    "type": "string"
+                },
+                {
+                    "name": "details",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "ggchecks",
+            "base": "",
+            "fields": [
+                {
+                    "name": "badge",
+                    "type": "name"
+                },
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "amount",
+                    "type": "uint8"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "gschecks",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "badge",
+                    "type": "name"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "trchecks",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "badge",
+                    "type": "name"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "cgchecks",
+            "type": "cgchecks",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "crchecks",
+            "type": "crchecks",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "cschecks",
+            "type": "cschecks",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "ggchecks",
+            "type": "ggchecks",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "gschecks",
+            "type": "gschecks",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "trchecks",
+            "type": "trchecks",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [],
+    "kv_tables": {},
+    "ricardian_clauses": [],
+    "variants": [],
+    "action_results": []
+}
