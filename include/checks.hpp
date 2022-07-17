@@ -12,12 +12,12 @@ CONTRACT checks : public contract {
       uint16_t count;
     };
   
-  ACTION cschecks (name creator, name badge, vector<name> parentbadge, string ipfsimage, string details);
-  ACTION cgchecks (name creator, name badge, time_point_sec starttime, uint64_t cycle_length, uint8_t max_cap, string ipfsimage, string details);
-  ACTION crchecks (name creator, name badge, vector<badge_count> rollup_criteria, string ipfsimage, string details);
-  ACTION ggchecks (name badge, name from, name to, uint8_t amount, string memo );
-  ACTION gschecks (name from, name to, name badge, string memo );
-  ACTION trchecks (name account, name badge);
+  [[eosio::on_notify("org::createsimple")]] void cschecks (name creator, name badge, vector<name> parentbadge, string ipfsimage, string details);
+  [[eosio::on_notify("org::creategotcha")]] void cgchecks (name creator, name badge, time_point_sec starttime, uint64_t cycle_length, uint8_t max_cap, string ipfsimage, string details);
+  [[eosio::on_notify("org::createrollup")]] void crchecks (name creator, name badge, vector<badge_count> rollup_criteria, string ipfsimage, string details);
+  [[eosio::on_notify("org::givegotcha")]] void ggchecks (name badge, name from, name to, uint8_t amount, string memo );
+  [[eosio::on_notify("org::givesimple")]] void gschecks (name from, name to, name badge, string memo );
+  [[eosio::on_notify("org::takerollup")]] void trchecks (name account, name badge);
 
   private:
 
